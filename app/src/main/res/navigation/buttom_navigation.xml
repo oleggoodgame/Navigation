@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttom_navigation"
+    app:startDestination="@id/buttonFragment">
+
+    <fragment
+        android:id="@+id/buttonFragment"
+        android:name="com.example.navigations.ButtonFragment"
+        android:label="fragment_button"
+        tools:layout="@layout/fragment_button" >
+        <action
+            android:id="@+id/action_buttonFragment_to_buttomSheet"
+            app:destination="@id/buttomSheet" />
+        <action
+            android:id="@+id/action_buttonFragment_to_scrollingFragment"
+            app:destination="@id/scrollingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buttonFragment2"
+        android:name="com.example.navigations.ButtonFragment2"
+        android:label="fragment_button2"
+        tools:layout="@layout/fragment_button2" />
+    <fragment
+        android:id="@+id/buttonFragment3"
+        android:name="com.example.navigations.ButtonFragment3"
+        android:label="fragment_button3"
+        tools:layout="@layout/fragment_button3" />
+    <dialog
+        android:id="@+id/buttomSheet"
+        android:name="com.example.navigations.ButtomSheet"
+        android:label="fragment_buttom_sheet"
+        tools:layout="@layout/fragment_buttom_sheet" >
+        <action
+            android:id="@+id/action_buttomSheet_to_buttonFragment"
+            app:destination="@id/buttonFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/scrollingFragment"
+        android:name="com.example.navigations.fragment.ScrollingFragment"
+        android:label="fragment_scrolling"
+        tools:layout="@layout/fragment_scrolling" />
+</navigation>

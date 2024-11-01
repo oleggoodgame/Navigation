@@ -1,0 +1,84 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <PreferenceCategory-->
+<!--        app:icon="@drawable/ic_baseline_message_24"-->
+<!--        app:title="@string/messages_header">-->
+
+<!--        <EditTextPreference-->
+<!--            app:key="signature"-->
+<!--            app:title="@string/signature_title"-->
+<!--            app:useSimpleSummaryProvider="true" />-->
+
+<!--        <ListPreference-->
+<!--            app:defaultValue="reply"-->
+<!--            app:entries="@array/reply_entries"-->
+<!--            app:entryValues="@array/reply_values"-->
+<!--            app:key="reply"-->
+<!--            app:title="@string/reply_title"-->
+<!--            app:useSimpleSummaryProvider="true" />-->
+
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory-->
+<!--        app:icon="@drawable/ic_baseline_settings_24"-->
+<!--        app:title="@string/sync_header">-->
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:key="sync"-->
+<!--            app:title="@string/sync_title" />-->
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:dependency="sync"-->
+<!--            app:key="attachment"-->
+<!--            app:summaryOff="@string/attachment_summary_off"-->
+<!--            app:summaryOn="@string/attachment_summary_on"-->
+<!--            app:title="@string/attachment_title" />-->
+
+<!--    </PreferenceCategory>-->
+
+<!--    <PreferenceCategory-->
+<!--        app:icon="@drawable/ic_baseline_notifications_24"-->
+<!--        app:title="Notifications">-->
+
+<!--        <SeekBarPreference-->
+<!--            app:key="volume_notifications"-->
+<!--            app:title="Volume"-->
+<!--            app:showSeekBarValue="true"-->
+<!--            app:defaultValue= "60" />-->
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:key="notifications"-->
+<!--            app:title="Disable notifications"-->
+<!--            app:summaryOn="You will no longer receive any notifications"-->
+<!--            app:summaryOff="You will receive all notifications"/>-->
+<!--    </PreferenceCategory>-->
+
+
+</PreferenceScreen>
+
+
+<!--    . app:useSimpleSummaryProvider="true"-->
+<!--    Цей атрибут використовується для автоматичного створення короткого опису (summary) під значенням налаштування. Він динамічно оновлюється на основі того, що користувач ввів у відповідне поле.-->
+
+<!--    Приклад: Якщо в поле EditTextPreference користувач введе текст підпису, то цей підпис буде відображений у вигляді короткого опису без необхідності додаткового кодування.-->
+
+<!--    app:defaultValue="reply"-->
+<!--    Цей атрибут визначає значення за замовчуванням для даного налаштування. Якщо користувач ще не вибрав жодного значення, система використовує це значення.-->
+
+<!--    Приклад: Для ListPreference, значенням за замовчуванням буде "reply", яке відповідає одному з варіантів у списку.-->
+
+<!--    app:entries="@array/reply_entries" і app:entryValues="@array/reply_values"-->
+<!--    Ці два атрибути визначають масиви, які використовуються для створення списку варіантів у налаштуванні ListPreference.-->
+
+<!--    @array/reply_entries — це масив текстових значень, які користувач побачить у випадаючому списку.-->
+<!--    @array/reply_values — це масив значень, які відповідають текстовим варіантам у reply_entries. Ці значення зберігаються як обране налаштування.-->
+
+<!--//SwitchPreferenceCompat — це налаштування у вигляді перемикача. Коли він увімкнений, налаштування активне, коли вимкнений — неактивне.-->
+
+<!--    app:dependency="sync" — цей атрибут вказує на те, що другий SwitchPreferenceCompat залежить від першого. Якщо sync перемикач увімкнений, то attachment буде активним і доступним для взаємодії. Якщо sync вимкнений, то attachment буде неактивним.-->
+
+<!--    summaryOff і summaryOn — це описи, які відображаються під назвою налаштування, залежно від того, увімкнений або вимкнений перемикач.-->
+
+<!--    SeekBarPreference — це повзунок для вибору числового значення в діапазоні.-->
+<!--    showSeekBarValue="true" — цей атрибут показує поточне значення повзунка поряд з ним.-->
+<!--    defaultValue="60" — значення за замовчуванням для повзунка. У даному випадку повзунок починатиме з значення 60.-->

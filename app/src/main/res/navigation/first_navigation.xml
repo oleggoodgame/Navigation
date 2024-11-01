@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_navigation"
+    app:startDestination="@id/blankNavigation">
+<!--    action описує, до якого фрагмента потрібно перейти-->
+    <fragment
+        android:id="@+id/blankNavigation"
+        android:name="com.example.navigations.BlankNavigation"
+        android:label="fragment_blank_navigation"
+        tools:layout="@layout/fragment_blank_navigation" >
+        <action
+            android:id="@+id/firstNavigationAction"
+            app:destination="@id/secondNavigation"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondNavigation"
+        android:name="com.example.navigations.SecondNavigation"
+        android:label="fragment_second_navigation"
+        tools:layout="@layout/fragment_second_navigation" >
+        <action
+            android:id="@+id/secondNavigationAction"
+            app:destination="@id/blankNavigation"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <argument
+            android:name="number"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+</navigation>
+
+<!--    popEnterAnim: Анімація, яка виконується, коли користувач повертається до попереднього фрагмента через кнопку "назад". Це анімація входу.-->
+<!--    popExitAnim: Анімація, яка виконується для фрагмента, що зникає, коли користувач натискає "назад". Це анімація виходу.-->
